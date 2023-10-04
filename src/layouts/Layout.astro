@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { titol } = Astro.props;
+console.log('Càrrega Layout');
 ---
 
 <!doctype html>
@@ -17,17 +18,61 @@ const { titol } = Astro.props;
     <title>{titol}</title>
   </head>
 
-  <body class='bg-gray-900 min-h-screen pb-32'>
-    <main>
+  <body class='bg-zinc-900 text-gray-100'>
+    <main class='mx-auto mt-10 px-2 flex flex-col gap-y-16 container'>
       <slot />
     </main>
 
     <style is:global>
-      body {
-        background:#202020;
-        color: whitesmoke;
-      }
+      
     </style>
-
   </body>
 </html>
+
+<style>
+  @media (min-width: 420px) {
+    .container {
+      /* color: red; */
+      max-width: 420px;
+    }
+  }
+  @media (min-width: 640px) {
+    .container {
+      /*
+      mida: 'sm'
+      color: blue; */
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      /*
+      mida: 'md' 
+      color: orange; */
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container {
+      /*
+      mida: 'lg'
+      color: green; */
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .container {
+      /*
+      mida: 'xl'
+      color: brown; */
+      max-width: 1280px;
+    }
+  }
+  @media (min-width: 1536px) {
+    .container {
+      /*
+      color: yellow; */
+      max-width: 1536px;
+    }
+  }
+</style>
