@@ -1,5 +1,6 @@
 ---
-import fingerprint from '../assets/svg/undraw_fingerprint_login_re_t71l.svg';
+import { capssalera } from '../lib/data/contingutWeb.ts';
+const { imatge, alt } = capssalera[0];
 ---
 
 <header
@@ -9,8 +10,9 @@ import fingerprint from '../assets/svg/undraw_fingerprint_login_re_t71l.svg';
     <p class='text-2xl py-4'>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, optio.
     </p>
-    <button class='bg-indigo-500 px-3 py-2 hover:bg-indigo-400 rounded-md'>Comencem</button
+    <button class='bg-indigo-500 px-3 py-2 hover:bg-indigo-400 rounded-md'
+      >Comencem</button
     >
   </div>
-  <img class='w-80' src={fingerprint.src} alt='fingerprint' />
+  <img class='w-80 mx-auto' src={imatge} alt={alt} />
 </header>

@@ -1,30 +1,27 @@
 ---
-import logoAstro from '../assets/svg/favicon.svg';
+import type { mesInfoT } from '../lib/data/contingutWeb.ts';
+import { mesInfo } from '../lib/data/contingutWeb.ts';
+
+interface Props {
+  mesInfo: mesInfoT[];
+}
 ---
 
-<section class='flex flex-col gap-12 md:flex-row rounded-xl md:p-20'>
-  <div class='flex-1 grid grid-cols-2'>
-    <div>
-      <img class='w-20 m-auto' src={logoAstro.src} alt="Logo d'Astro" />
-      <p class='text-center pt-4'>Dev Management</p>
-    </div>
-    <div>
-      <img class='w-20 m-auto' src={logoAstro.src} alt="Logo d'Astro" />
-      <p class='text-center pt-4'>Dev Management</p>
-    </div>
-    <div>
-      <img class='w-20 m-auto' src={logoAstro.src} alt="Logo d'Astro" />
-      <p class='text-center pt-4'>Dev Management</p>
-    </div>
-    <div>
-      <img class='w-20 m-auto' src={logoAstro.src} alt="Logo d'Astro" />
-      <p class='text-center pt-4'>Dev Management</p>
-    </div>
-  </div>
-  <div class='flex-1 text-center'>
+<section class='flex flex-col gap-12 md:flex-row md:p-8 lg:pd-20'>
+  <div class='flex-1 md:order-2 text-center'>
     <h2 class='text-5xl font-bold pb-2'>Lorem ipsum dolor sit.</h2>
     <p class='text-3xl py-4 text-zinc-300'>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, ad.
     </p>
+  </div>
+  <div class='flex-auto grid grid-cols-1 lg:grid-cols-2 gap-4'>
+    {
+      mesInfo.map(({ imatge, text }) => (
+        <div class='bg-slate-800 rounded-xl p-4'>
+          <img class='w-20 m-auto' src={imatge} alt="Logo d'Astro" />
+          <p class='text-center pt-4'>{text}</p>
+        </div>
+      ))
+    }
   </div>
 </section>
