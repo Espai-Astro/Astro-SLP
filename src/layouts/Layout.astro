@@ -18,61 +18,7 @@ console.log('Càrrega Layout');
     <title>{titol}</title>
   </head>
 
-  <body class='bg-zinc-900 text-gray-100'>
-    <main class='mx-auto mt-2 md:mt-10 px-4 flex flex-col gap-y-16 md:gap-y-18 container'>
-      <slot />
-    </main>
-
-    <style is:global>
-      
-    </style>
+  <body class='bg-zinc-900 text-zinc-300'>
+    <slot />
   </body>
 </html>
-
-<style>
-  @media (min-width: 420px) {
-    .container {
-      /* color: red; */
-      max-width: 420px;
-    }
-  }
-  @media (min-width: 640px) {
-    .container {
-      /*
-      mida: 'sm'
-      color: blue; */
-      max-width: 640px;
-    }
-  }
-  @media (min-width: 768px) {
-    .container {
-      /*
-      mida: 'md' 
-      color: orange; */
-      max-width: 768px;
-    }
-  }
-  @media (min-width: 1024px) {
-    .container {
-      /*
-      mida: 'lg'
-      color: green; */
-      max-width: 1024px;
-    }
-  }
-  @media (min-width: 1280px) {
-    .container {
-      /*
-      mida: 'xl'
-      color: brown; */
-      max-width: 1280px;
-    }
-  }
-  @media (min-width: 1536px) {
-    .container {
-      /*
-      color: yellow; */
-      max-width: 1536px;
-    }
-  }
-</style>

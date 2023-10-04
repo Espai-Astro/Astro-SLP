@@ -1,20 +1,20 @@
 ---
-import type { carateristiquesT } from '../lib/data/contingutWeb.ts';
-import { caracteristiques } from '../lib/data/contingutWeb';
+import type { carateristiquesT } from '../lib/types/contingutTypes.ts';
 
 interface Props {
-  caracteritiques: carateristiquesT[];
+  caracteristiques: carateristiquesT[];
 }
+const { caracteristiques } = Astro.props;
 ---
 
-<section class='flex flex-col gap-4'>
-  <h1 class='text-center text-5xl font-bold'>Característiques</h1>
-  <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:p-8'>
+<section class='flex flex-col gap-12'>
+  <h2 class='text-center text-5xl font-bold py-4'>Característiques</h2>
+  <div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:px-8'>
     {
       caracteristiques.map(({ titol, text }) => (
         <div class='bg-slate-800 rounded-xl p-8'>
-          <h2 class='text-2xl font-bold py-4'>{titol}</h2>
-          <p>{text}</p>
+          <h4 class='text-2xl font-bold py-4'>{titol}</h4>
+          <p class='text-lg py-2'>{text}</p>
         </div>
       ))
     }

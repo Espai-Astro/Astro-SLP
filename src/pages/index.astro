@@ -5,12 +5,78 @@ import MesInfo from '../components/MesInfo.astro';
 import Caracteristiques from '../components/Caracteristiques.astro';
 import Projectes from '../components/Projectes.astro';
 import SobreNosaltres from '../components/SobreNosaltres.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+import {
+  capssalera,
+  mesInfo,
+  projectes,
+  caracteristiques,
+} from '../lib/data/contingutWeb.ts';
 ---
 
-<Layout titol='Inici'>
-  <Capssalera />
-  <MesInfo />
-  <Caracteristiques />
-  <Projectes/>
-  <SobreNosaltres/>
+<Layout titol='Astro SPA'>
+  <header class=''>
+    <Header />
+  </header>
+  <div class='container mx-auto my-2 md:mt-10 px-4'>
+    <main class='flex flex-col gap-y-28 md:gap-y-18'>
+      <Capssalera capssalera={capssalera} />
+      <MesInfo mesInfo={mesInfo} />
+      <Caracteristiques caracteristiques={caracteristiques} />
+      <Projectes projectes={projectes} />
+      <SobreNosaltres />
+    </main>
+    <footer class=''>
+      <Footer />
+    </footer>
+  </div>
+  <style is:global>
+    @media (min-width: 420px) {
+      .container {
+        /* color: red; */
+        max-width: 420px;
+      }
+    }
+    @media (min-width: 640px) {
+      .container {
+        /*
+      mida: 'sm'
+      color: blue; */
+        max-width: 640px;
+      }
+    }
+    @media (min-width: 768px) {
+      .container {
+        /*
+      mida: 'md' 
+      color: orange; */
+        max-width: 768px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .container {
+        /*
+      mida: 'lg'
+      color: green; */
+        max-width: 1024px;
+      }
+    }
+    @media (min-width: 1280px) {
+      .container {
+        /*
+      mida: 'xl'
+      color: brown; */
+        max-width: 1280px;
+      }
+    }
+    @media (min-width: 1536px) {
+      .container {
+        /*
+      color: yellow; */
+        max-width: 1536px;
+      }
+    }
+  </style>
 </Layout>

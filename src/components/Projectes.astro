@@ -1,1 +1,37 @@
-<h1>Projectes</h1>
+---
+import type { projectesT } from '../lib/types/contingutTypes.ts';
+
+interface Props {
+  projectes: projectesT[];
+}
+const { projectes } = Astro.props;
+---
+
+<setcion class='flex flex-col gap-12 md:px-20'>
+  <div class='flex-1 text-center'>
+    <h2 class='text-5xl font-bold py-4'>Projectes</h2>
+    <p class='text-2xl py-0'>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, ad.
+    </p>
+  </div>
+  <div class='flex flex-col gap-8 md:px-8'>
+    {
+      projectes.map(({ titol, descripcio }, index) => (
+        <div class='bg-slate-800 rounded-xl p-12 text-start'>
+          <h4 class='text-2xl font-bold py-4'>{titol}</h4>
+          <div class='ps-4 text-justify'>
+            <p class='text-lg py-2'>{descripcio}</p>
+            <div class='ps-4'>
+              <h5 class='text-xl font-semibold py-3'>Lorem ipsum dolor sit:</h5>
+              <ul class='ms-4 ps-4 list-disc'>
+                {projectes[index].claus.map((clau) => (
+                  <li class='ps-2'>{clau}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</setcion>
