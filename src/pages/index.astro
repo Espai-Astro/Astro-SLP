@@ -9,10 +9,11 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 import {
-  capssalera,
+  imatges,
   mesInfo,
   projectes,
   caracteristiques,
+  nosaltres
 } from '../lib/data/contingutWeb.ts';
 ---
 
@@ -20,13 +21,13 @@ import {
   <header class=''>
     <Header />
   </header>
-  <div class='container mx-auto my-2 md:mt-10 px-4'>
+  <div class='container mx-auto mt-52 px-4'>
     <main class='flex flex-col gap-y-28 md:gap-y-18'>
-      <Capssalera capssalera={capssalera} />
-      <MesInfo mesInfo={mesInfo} />
+      <Capssalera imatge={imatges[0]} />
+      <MesInfo mesInfo={mesInfo} imatge={imatges[1]} />
       <Caracteristiques caracteristiques={caracteristiques} />
       <Projectes projectes={projectes} />
-      <SobreNosaltres />
+      <SobreNosaltres nosaltres={nosaltres} />
     </main>
     <footer class=''>
       <Footer />

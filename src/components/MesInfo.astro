@@ -1,24 +1,30 @@
 ---
+import type { imatgeT } from '../lib/types/contingutTypes.ts';
 import type { mesInfoT } from '../lib/types/contingutTypes.ts';
 
+const { imatge } = Astro.props;
+const { src, alt } = imatge;
+
 interface Props {
+  imatge: imatgeT;
   mesInfo: mesInfoT[];
 }
 const { mesInfo } = Astro.props;
 ---
 
 <section class='flex flex-col gap-12 md:flex-row md:px-8 lg:px-20'>
-  <div class='flex-1 md:order-2 text-center'>
-    <h2 class='text-5xl font-bold py-4'>Lorem ipsum dolor sit</h2>
+  <div class='flex-1 flex flex-col gap-6 justify-center md:order-1 text-center'>
+    <h2 class='text-5xl font-bold py-4'>Més informació</h2>
     <p class='text-2xl md:text-3xl py-4'>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, ad.
     </p>
+    <img class='w-60 mx-auto pt-4' src={src} alt={alt} />
   </div>
   <div class='flex-auto grid grid-cols-1 lg:grid-cols-2 gap-8'>
     {
-      mesInfo.map(({ imatge, text }) => (
+      mesInfo.map(({ src, text }) => (
         <div class='bg-slate-800 rounded-xl p-4'>
-          <img class='w-20 h-60 m-auto' src={imatge} alt="Logo d'Astro" />
+          <img class='w-20 h-60 m-auto' src={src} alt={alt} />
           <p class='text-center pt-4'>{text}</p>
         </div>
       ))

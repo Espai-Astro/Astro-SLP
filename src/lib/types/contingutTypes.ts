@@ -1,24 +1,34 @@
-export type capssaleraT = {
+export type imatgeT = {
   id: number;
-  imatge: string;
+  src: string;
   alt: string;
 };
 
 export type mesInfoT = {
   id: number;
   text: string;
-  imatge: string;
+  src: string;
+  alt: string;
 };
 
-export type carateristiquesT = {
+export type carateristicaT = {
   id: number;
   titol: string;
   text: string;
 };
 
-export type projectesT = {
+export type projecteT = {
 	id: number;
 	titol: string;
   descripcio: string;
   claus: string[];
+  src: string;
+  alt: string;
+}
+
+export type nosaltresT = {
+  id: number;
+  nom: string;
+  src: string;
+  alt: string;
 }
