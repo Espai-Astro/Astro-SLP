@@ -1,3 +1,9 @@
+export type enllassT = {
+  id: number;
+  url: string;
+  nom: string;
+}
+
 export type imatgeT = {
   id: number;
   src: string;

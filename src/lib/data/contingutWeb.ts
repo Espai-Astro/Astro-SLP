@@ -11,6 +11,34 @@ import male from '../../assets/svg/undraw_male_avatar_g98d.svg';
 
 import logoAstro from '../../assets/svg/favicon.svg';
 
+export const enllassos = [
+  {
+    id: 1,
+    url: '#presentacio',
+    nom: "presentació"
+  },
+  {
+    id: 2,
+    url: '#mesInfo',
+    nom: "més informació"
+  },
+  {
+    id: 3,
+    url: '#caracteristiques',
+    nom: "característiques"
+  },
+  {
+    id: 4,
+    url: '#projectes',
+    nom: "projectes"
+  },
+  {
+    id: 5,
+    url: '#nosaltres',
+    nom: "nosaltres"
+  },
+]
+
 export const imatges = [
   {
     id: 1,

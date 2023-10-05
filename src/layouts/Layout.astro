@@ -18,7 +18,16 @@ console.log('Càrrega Layout');
     <title>{titol}</title>
   </head>
 
-  <body class='bg-zinc-900 text-zinc-300'>
+  <body class='bg-zinc-900 text-zinc-200'>
     <slot />
+    <style is:global>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      section {
+        scroll-margin-top: 240px;
+      }
+    </style>
   </body>
 </html>

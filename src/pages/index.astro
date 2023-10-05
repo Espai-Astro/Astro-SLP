@@ -4,11 +4,12 @@ import Capssalera from '../components/Capssalera.astro';
 import MesInfo from '../components/MesInfo.astro';
 import Caracteristiques from '../components/Caracteristiques.astro';
 import Projectes from '../components/Projectes.astro';
-import SobreNosaltres from '../components/SobreNosaltres.astro';
+import Nosaltres from '../components/Nosaltres.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 import {
+  enllassos,
   imatges,
   mesInfo,
   projectes,
@@ -19,7 +20,8 @@ import {
 
 <Layout titol='Astro SPA'>
   <header class=''>
-    <Header />
+    <Header enllassos={enllassos} 
+    />
   </header>
   <div class='container mx-auto mt-60 px-4'>
     <main class='flex flex-col gap-y-28 md:gap-y-18'>
@@ -27,7 +29,7 @@ import {
       <MesInfo mesInfo={mesInfo} imatge={imatges[1]} />
       <Caracteristiques caracteristiques={caracteristiques} />
       <Projectes projectes={projectes} />
-      <SobreNosaltres nosaltres={nosaltres} />
+      <Nosaltres nosaltres={nosaltres} />
     </main>
     <footer class=''>
       <Footer />
