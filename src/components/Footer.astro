@@ -12,10 +12,10 @@ const imatgeLogo: string = logo.src;
 ---
 
 <div
-  class='w-full bg-slate-800 py-12 px-16 mt-12 border-t-2 border-b-zinc-400 flex justify-between'>
-  <ul class='font-thin'>
-    <li class='text-xl font-semibold mb-3'>{nom}</li>
-    <div class='flex flex-col gap-3 text-lg'>
+  class='w-full bg-slate-800 py-12 px-16 mt-12 border-t-2 border-b-zinc-400 flex justify-center gap-20 sm:gap-80 md:gap-96 lg:gap-40 xl:gap-60'>
+  <ul class='font-thin xl:flex xl:place-items-start xl:gap-20 xl:pt-6'>
+    <li class='text-xl font-semibold mb-3 lg:text-center xl:text-start'>{nom}</li>
+    <div class='flex flex-col lg:place-items-center lg:flex-row gap-3 lg:gap-20 text-lg'>
       <div>
         <li>{correu}</li>
         <li>{telefon}</li>
@@ -29,14 +29,15 @@ const imatgeLogo: string = logo.src;
     </div>
   </ul>
 
-  <div class='flex flex-col justify-between place-items-center'>
-    <div class='flex flex-col'>
+  <div
+    class='flex flex-col lg:flex-row lg:gap-24 justify-between place-items-center'>
+    <div class='lg:order-1 flex flex-col'>
       <img class='w-24' src={imatgeLogo} alt='Logo' />
-      <h3 class='text-lg font-bold lg:-ms-44 uppercase'>
-        Astro <span class='font-thin' );>SLP</span>
+      <h3 class='text-lg font-bold uppercase'>
+        Astro <span class='font-thin'>SLP</span>
       </h3>
     </div>
-    <ul class='flex gap-2 pb-1'>
+    <ul class='flex gap-4 md:gap-8 pb-1 lg:pb-2'>
       {
         xxss.map(({ src, nom }) => (
           <li>
