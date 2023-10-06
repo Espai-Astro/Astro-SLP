@@ -12,32 +12,29 @@ const imatgeLogo: string = logo.src;
 ---
 
 <div
-  class='w-full bg-slate-800 py-12 px-16 mt-12 border-t-2 border-b-zinc-400 flex justify-center gap-20 sm:gap-80 md:gap-96 lg:gap-40 xl:gap-60'>
-  <ul class='font-thin xl:flex xl:place-items-start xl:gap-20 xl:pt-6'>
-    <li class='text-xl font-semibold mb-3 lg:text-center xl:text-start'>{nom}</li>
-    <div class='flex flex-col lg:place-items-center lg:flex-row gap-3 lg:gap-20 text-lg'>
-      <div>
-        <li>{correu}</li>
-        <li>{telefon}</li>
-      </div>
-      <div class='flex flex-col gap-1 text-sm'>
-        <li>{adreça}</li>
-        <li>
-          {codi} - {poblacio}
-        </li>
-      </div>
+  class='w-full bg-slate-800 py-12 px-16 sm:px-24 md:px-28 lg:px-36 xl:px-40 mt-20 border-t-2 border-b-zinc-400 flex justify-between'>
+  <ul class='flex flex-col lg:flex-row align-items-start justify-between lg:justify-center place-items-start gap-4 lg:gap-10 font-thin'>
+    <li class='text-xl font-semibold'>{nom}</li>
+    <div class='flex flex-col text-lg'>
+      <li>{correu}</li>
+      <li>{telefon}</li>
+    </div>
+    <div class='flex flex-col gap-1 text-sm lg:pt-1'>
+      <li>{adreça}</li>
+      <li>
+        {codi} - {poblacio}
+      </li>
     </div>
   </ul>
 
-  <div
-    class='flex flex-col lg:flex-row lg:gap-24 justify-between place-items-center'>
+  <div class='flex flex-col lg:flex-row justify-between lg:justify-center place-items-center lg:place-items-start lg:gap-8'>
     <div class='lg:order-1 flex flex-col'>
       <img class='w-24' src={imatgeLogo} alt='Logo' />
       <h3 class='text-lg font-bold uppercase'>
         Astro <span class='font-thin'>SLP</span>
       </h3>
     </div>
-    <ul class='flex gap-4 md:gap-8 pb-1 lg:pb-2'>
+    <ul class='flex gap-4 lg:gap-6pb-1 lg:pt-2'>
       {
         xxss.map(({ src, nom }) => (
           <li>
