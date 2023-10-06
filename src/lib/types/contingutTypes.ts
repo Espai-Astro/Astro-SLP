@@ -1,4 +1,4 @@
-export type enllassT = {
+export type enllaçT = {
   id: number;
   url: string;
   nom: string;

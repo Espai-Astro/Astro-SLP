@@ -40,7 +40,7 @@ export {
 };
 
 import {
-  enllassos,
+  enllaços,
   imatges,
   info,
   caracteristiques,
@@ -51,7 +51,7 @@ import {
 } from './contingutWeb';
 
 export {
-  enllassos,
+  enllaços,
   imatges,
   info,
   caracteristiques,

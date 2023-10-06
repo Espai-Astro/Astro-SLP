@@ -1,5 +1,5 @@
 import type {
-  enllassT,
+  enllaçT,
   imatgeT,
   infoT,
   caracteristicaT,
@@ -10,7 +10,7 @@ import type {
 } from './contingutTypes';
 
 export type {
-  enllassT,
+  enllaçT,
   imatgeT,
   infoT,
   caracteristicaT,

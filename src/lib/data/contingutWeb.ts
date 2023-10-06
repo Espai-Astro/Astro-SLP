@@ -19,7 +19,7 @@ import {
   x,
 } from './index';
 
-export const enllassos = [
+export const enllaços = [
   {
     id: 1,
     url: 'presentacio',
