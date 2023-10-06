@@ -1,47 +1,51 @@
 import {
-	fingerprint,
-	searchApp,
-	funMoments,
-	happyFeeling,
-	mindFullness,
-	deliveryTruck,
-	female,
-	femaleB,
-	maleB,
-	male,
-	completed,
-	completion,
-	mobileContent,
-	reminder
+  fingerprint,
+  searchApp,
+  funMoments,
+  happyFeeling,
+  mindFullness,
+  deliveryTruck,
+  female,
+  femaleB,
+  maleB,
+  male,
+  completed,
+  completion,
+  mobileContent,
+  reminder,
+  whatsapp,
+  instagram,
+  facebook,
+  x,
 } from './index';
 
 export const enllassos = [
   {
     id: 1,
-    url: '#presentacio',
-    nom: "presentació"
+    url: 'presentacio',
+    nom: 'presentació',
   },
   {
     id: 2,
-    url: '#mesInfo',
-    nom: "més informació"
+    url: 'info',
+    nom: 'més informació',
   },
   {
     id: 3,
-    url: '#caracteristiques',
-    nom: "característiques"
+    url: 'caracteristiques',
+    nom: 'característiques',
   },
   {
     id: 4,
-    url: '#projectes',
-    nom: "projectes"
+    url: 'projectes',
+    nom: 'projectes',
   },
   {
     id: 5,
-    url: '#nosaltres',
-    nom: "nosaltres"
+    url: 'nosaltres',
+    nom: 'nosaltres',
   },
-]
+];
 
 export const imatges = [
   {
@@ -159,26 +163,58 @@ export const projectes = [
 export const nosaltres = [
   {
     id: 3,
-    nom: "Augusta Montivento",
+    nom: 'Augusta Montivento',
     src: female.src,
     alt: 'Female',
   },
   {
     id: 4,
-    nom: "Catalina Breschia",
+    nom: 'Catalina Breschia',
     src: femaleB.src,
     alt: 'FemaleB',
   },
   {
     id: 5,
-    nom: "Julius Mendrum",
+    nom: 'Julius Mendrum',
     src: male.src,
     alt: 'Male',
   },
   {
     id: 6,
-    nom: "Gregorius Pelis",
+    nom: 'Gregorius Pelis',
     src: maleB.src,
     alt: 'MaleB',
+  },
+];
+
+export const contacte = {
+  nom: 'Astro SLP Coop.',
+  correu: 'hola@astroslp.cat',
+  telefon: '+(34)123789456',
+  adreça: 'C/ del Pedregar, 45',
+  codi: '080018',
+  poblacio: 'St. Fost de Campcentelles',
+};
+
+export const xxss = [
+  {
+    id: 1,
+    nom: 'whatsapp',
+    src: whatsapp.src,
+  },
+  {
+    id: 2,
+    nom: 'instagram',
+    src: instagram.src,
+  },
+  {
+    id: 3,
+    nom: 'facebook',
+    src: facebook.src,
+  },
+  {
+    id: 4,
+    nom: 'X',
+    src: x.src,
   },
 ];

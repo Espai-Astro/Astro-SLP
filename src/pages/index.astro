@@ -5,18 +5,14 @@ import Info from '../components/Info.astro';
 import Caracteristiques from '../components/Caracteristiques.astro';
 import Projectes from '../components/Projectes.astro';
 import Nosaltres from '../components/Nosaltres.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 
 import {
-  enllassos,
   imatges,
   info,
   projectes,
   caracteristiques,
   nosaltres,
 } from '../lib/data/contingutWeb.ts';
-console.log(info);
 ---
 
 <Layout titol='Astro SPA'>
@@ -27,7 +23,4 @@ console.log(info);
     <Projectes projectes={projectes} />
     <Nosaltres nosaltres={nosaltres} />
   </main>
-  <footer class=''>
-    <Footer />
-  </footer>
 </Layout>

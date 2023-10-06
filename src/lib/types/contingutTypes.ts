@@ -38,3 +38,18 @@ export type nosaltresT = {
   src: string;
   alt: string;
 }
+
+export type contacteT = {
+  nom: string;
+  correu: string;
+  telefon: string;
+  adreça: string;
+  codi: string;
+  poblacio: string;
+}
+
+export type xsT = {
+  id: number;
+  nom: string;
+  src: string;
+}

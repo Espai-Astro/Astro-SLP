@@ -1,3 +1,63 @@
-<div class=''>
-	<h1>Footer</h1>
+---
+import type { contacteT, xsT } from '../lib/types';
+import logo from '../assets/img/logo-preview2.webp';
+
+interface Props {
+  contacte: contacteT;
+  xxss: xsT[];
+}
+const { contacte, xxss } = Astro.props;
+const { nom, correu, telefon, adreça, codi, poblacio } = contacte;
+const imatgeLogo: string = logo.src;
+---
+
+<div
+  class='w-full bg-slate-800 py-12 px-16 mt-12 border-t-2 border-b-zinc-400 flex justify-between'>
+  <ul class='font-thin'>
+    <li class='text-xl font-semibold mb-3'>{nom}</li>
+    <div class='flex flex-col gap-3 text-lg'>
+      <div>
+        <li>{correu}</li>
+        <li>{telefon}</li>
+      </div>
+      <div class='flex flex-col gap-1 text-sm'>
+        <li>{adreça}</li>
+        <li>
+          {codi} - {poblacio}
+        </li>
+      </div>
+    </div>
+  </ul>
+
+  <div class='flex flex-col justify-between place-items-center'>
+    <div class='flex flex-col'>
+      <img class='w-24' src={imatgeLogo} alt='Logo' />
+      <h3 class='text-lg font-bold lg:-ms-44 uppercase'>
+        Astro <span class='font-thin' );>SLP</span>
+      </h3>
+    </div>
+    <ul class='flex gap-2 pb-1'>
+      {
+        xxss.map(({ src, nom }) => (
+          <li>
+            <a href='#' class='filtre-sky'>
+              <img class='w-7 filtre-xs' src={src} alt={nom} title={nom} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </div>
+
+<style>
+  .filtre-xs {
+    filter: invert(73%) sepia(99%) saturate(7%) hue-rotate(218deg)
+      brightness(95%) contrast(97%);
+  }
+
+  a:hover {
+    filter: invert(77%) sepia(28%) saturate(6519%) hue-rotate(166deg)
+      brightness(100%) contrast(95%);
+  }
+</style>

@@ -12,15 +12,11 @@ import completed from '../../assets/svg/undraw_completed_m9ci.svg';
 import completion from '../../assets/svg/undraw_completion_w34a.svg';
 import mobileContent from '../../assets/svg/undraw_mobile_content_xvgr.svg';
 import reminder from '../../assets/svg/undraw_reminder_re_fe15.svg';
+import whatsapp from '../../assets/svg/brand-whatsapp.svg';
+import instagram from '../../assets/svg/brand-instagram.svg';
+import facebook from '../../assets/svg/brand-facebook.svg';
+import x from '../../assets/svg/brand-x.svg';
 
-import {
-	enllassos,
-	imatges,
-	info,
-	caracteristiques,
-	projectes,
-	nosaltres,
-} from './contingutWeb';
 
 export {
   fingerprint,
@@ -36,8 +32,23 @@ export {
   completed,
   completion,
   mobileContent,
-  reminder,
-}
+	reminder,
+	whatsapp,
+	instagram,
+	facebook,
+	x
+};
+
+import {
+  enllassos,
+  imatges,
+  info,
+  caracteristiques,
+  projectes,
+  nosaltres,
+  contacte,
+  xxss,
+} from './contingutWeb';
 
 export {
   enllassos,
@@ -46,4 +57,6 @@ export {
   caracteristiques,
   projectes,
   nosaltres,
-}
+	contacte,
+	xxss
+};

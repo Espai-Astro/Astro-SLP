@@ -12,7 +12,7 @@ const { enllassos } = Astro.props;
 		{
 			enllassos.map(({ url, nom }) => (
 				<li class='cursor-pointer hover:text-sky-400 border-b-2 border-transparent hover:border-sky-400'>
-					<a href={url}>{nom}</a>
+					<a href={`#${url}`}>{nom}</a>
 				</li>
 			))
 		}
