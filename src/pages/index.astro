@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Capssalera from '../components/Capssalera.astro';
-import MesInfo from '../components/MesInfo.astro';
+import Presentacio from '../components/Presentacio.astro';
+import Info from '../components/Info.astro';
 import Caracteristiques from '../components/Caracteristiques.astro';
 import Projectes from '../components/Projectes.astro';
 import Nosaltres from '../components/Nosaltres.astro';
@@ -11,75 +11,23 @@ import Footer from '../components/Footer.astro';
 import {
   enllassos,
   imatges,
-  mesInfo,
+  info,
   projectes,
   caracteristiques,
-  nosaltres
+  nosaltres,
 } from '../lib/data/contingutWeb.ts';
+console.log(info);
 ---
 
 <Layout titol='Astro SPA'>
-  <header class=''>
-    <Header enllassos={enllassos} 
-    />
-  </header>
-  <div class='container mx-auto mt-60 px-4'>
-    <main class='flex flex-col gap-y-28 md:gap-y-18'>
-      <Capssalera imatge={imatges[0]} />
-      <MesInfo mesInfo={mesInfo} imatge={imatges[1]} />
-      <Caracteristiques caracteristiques={caracteristiques} />
-      <Projectes projectes={projectes} />
-      <Nosaltres nosaltres={nosaltres} />
-    </main>
-    <footer class=''>
-      <Footer />
-    </footer>
-  </div>
-  <style is:global>
-    @media (min-width: 420px) {
-      .container {
-        /* color: red; */
-        max-width: 420px;
-      }
-    }
-    @media (min-width: 640px) {
-      .container {
-        /*
-      mida: 'sm'
-      color: blue; */
-        max-width: 640px;
-      }
-    }
-    @media (min-width: 768px) {
-      .container {
-        /*
-      mida: 'md' 
-      color: orange; */
-        max-width: 768px;
-      }
-    }
-    @media (min-width: 1024px) {
-      .container {
-        /*
-      mida: 'lg'
-      color: green; */
-        max-width: 1024px;
-      }
-    }
-    @media (min-width: 1280px) {
-      .container {
-        /*
-      mida: 'xl'
-      color: brown; */
-        max-width: 1280px;
-      }
-    }
-    @media (min-width: 1536px) {
-      .container {
-        /*
-      color: yellow; */
-        max-width: 1536px;
-      }
-    }
-  </style>
+  <main class='flex flex-col gap-y-28 md:gap-y-18'>
+    <Presentacio imatge={imatges[0]} />
+    <Info info={info} imatge={imatges[1]} />
+    <Caracteristiques caracteristiques={caracteristiques} />
+    <Projectes projectes={projectes} />
+    <Nosaltres nosaltres={nosaltres} />
+  </main>
+  <footer class=''>
+    <Footer />
+  </footer>
 </Layout>

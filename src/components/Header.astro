@@ -1,25 +1,24 @@
 ---
 import logo from '../assets/img/logo-preview2.webp';
 import Nav from './Nav.astro';
-import type { enllassT } from '../lib/types/contingutTypes';
+import type { enllassT } from '../lib/types';
 
 interface Props {
-  logo: string;
   enllassos: enllassT[];
 }
-const imatgeLogo = logo.src;
+const imatgeLogo: string = logo.src;
 const { enllassos } = Astro.props;
 ---
 
-<div class='fixed top-0 w-full bg-slate-800 p-4 flex'>
-  <div class='flex'>
+<div
+  class='fixed top-0 w-full bg-slate-800 p-4 border-b-2 border-b-zinc-400 flex flex-col gep-6 lg:flex-row'>
+  <div class='flex mx-auto'>
     <img class='w-60' src={imatgeLogo} alt='Logo' />
   </div>
-  <div class='flex-1 flex flex-col'>
-    <h1 class='text-center text-6xl font-bold py-4 -ms-60 uppercase'>
+  <div class='flex-1 flex flex-col justify-center gap-2'>
+    <h1 class='text-center text-6xl py-4 font-bold lg:-ms-44 uppercase'>
       Astro <span class='font-thin' );>SLP</span>
     </h1>
-    <Nav enllassos={enllassos} 
-    />
+    <Nav enllassos={enllassos} />
   </div>
 </div>

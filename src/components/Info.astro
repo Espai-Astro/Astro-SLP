@@ -1,31 +1,30 @@
 ---
-import type { imatgeT } from '../lib/types/contingutTypes.ts';
-import type { mesInfoT } from '../lib/types/contingutTypes.ts';
+import type { imatgeT, infoT } from '../lib/types';
 
 const { imatge } = Astro.props;
 const { src, alt } = imatge;
 
 interface Props {
   imatge: imatgeT;
-  mesInfo: mesInfoT[];
+  info: infoT[];
 }
-const { mesInfo } = Astro.props;
+const { info } = Astro.props;
 ---
 
 <section id='mesInfo' class='flex flex-col gap-12 md:flex-row md:px-8 lg:px-20'>
   <div class='flex-1 flex flex-col gap-6 justify-center md:order-1 text-center'>
-    <h2 class='text-5xl py-4'>Més informació</h2>
-    <p class='text-2xl md:text-3xl font-thin py-4'>
+    <h2 class='text-5xl py-4'>Informació</h2>
+    <p class='text-2xl md:text-2xl font-thin py-4'>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, ad.
     </p>
     <img class='w-60 mx-auto pt-4' src={src} alt={alt} />
   </div>
   <div class='flex-auto grid grid-cols-1 lg:grid-cols-2 gap-8'>
     {
-      mesInfo.map(({ src, text }) => (
-        <div class='bg-slate-800 rounded-xl p-4'>
-          <img class='w-20 h-60 m-auto' src={src} alt={alt} />
-          <p class='text-center pt-4'>{text}</p>
+      info.map(({ src, text }, index) => (
+        <div class='flex flex-col justify-between gap-10 bg-slate-800 rounded-xl p-10 pb-4'>
+          <img class={`${index === 1 || index === 2 ? 'w-80' : 'w-60'} h-60 mx-auto`} src={src} alt={alt} />
+          <p class='text-center font-semibold '>{text}</p>
         </div>
       ))
     }

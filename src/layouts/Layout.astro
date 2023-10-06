@@ -1,8 +1,9 @@
 ---
+import Header from '../components/Header.astro';
+import { enllassos } from '../lib/data/contingutWeb';
 interface Props {
   titol: string;
 }
-
 const { titol } = Astro.props;
 console.log('Càrrega Layout');
 ---
@@ -18,15 +19,81 @@ console.log('Càrrega Layout');
     <title>{titol}</title>
   </head>
 
-  <body class='bg-zinc-900 text-zinc-200'>
-    <slot />
+  <body class='bg-zinc-900 text-zinc-200 min-h-screen'>
+    <header class='alçada-header mb-16'>
+      <Header enllassos={enllassos} />
+    </header>
+    <div class='container mx-auto px-4'>
+      <slot />
+    </div>
     <style is:global>
       html {
         scroll-behavior: smooth;
+        font-size: 75%;
+      }
+      body {
+        font-family: 'ubuntu', sans-serif;
+      }
+      section {
+        scroll-margin-top: 400px;
       }
 
-      section {
-        scroll-margin-top: 240px;
+      @media (min-width: 0px) {
+        .container {
+          /* color: red; */
+          max-width: 420px;
+        }
+
+        .alçada-header {
+          height: 330px;
+        }
+      }
+      @media (min-width: 640px) {
+        .container {
+          /*
+      mida: 'sm'
+      color: blue; */
+          max-width: 640px;
+        }
+
+        .alçada-header {
+          height: 290px;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          /*
+      mida: 'md' 
+      color: orange; */
+          max-width: 768px;
+        }
+      }
+      @media (min-width: 1024px) {
+        .container {
+          /*
+      mida: 'lg'
+      color: green; */
+          max-width: 1024px;
+        }
+
+        .alçada-header {
+          height: 160px;
+        }
+      }
+      @media (min-width: 1280px) {
+        .container {
+          /*
+      mida: 'xl'
+      color: brown; */
+          max-width: 1280px;
+        }
+      }
+      @media (min-width: 1536px) {
+        .container {
+          /*
+      color: yellow; */
+          max-width: 1536px;
+        }
       }
     </style>
   </body>

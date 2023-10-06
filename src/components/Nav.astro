@@ -1,5 +1,5 @@
 ---
-import type { enllassT } from '../lib/types/contingutTypes';
+import type { enllassT } from '../lib/types';
 
 interface Props {
 	enllassos: enllassT[];
@@ -7,11 +7,11 @@ interface Props {
 const { enllassos } = Astro.props;
 ---
 
-<nav>
-	<ul class='flex gap-4 justify-evenly p-6 text-xl text-zinc-400 capitalize'>
+<nav id="nav">
+	<ul class='flex flex-row flex-wrap gap-8 md:gap-16 xl:gap-24 lg:-ms-60  justify-center p-6 text-xl text-zinc-400 capitalize'>
 		{
 			enllassos.map(({ url, nom }) => (
-				<li class='cursor-pointer hover:text-sky-400 hover:border-b-2 hover:border-sky-400'>
+				<li class='cursor-pointer hover:text-sky-400 border-b-2 border-transparent hover:border-sky-400'>
 					<a href={url}>{nom}</a>
 				</li>
 			))

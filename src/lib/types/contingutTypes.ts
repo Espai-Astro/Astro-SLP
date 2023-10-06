@@ -10,14 +10,14 @@ export type imatgeT = {
   alt: string;
 };
 
-export type mesInfoT = {
+export type infoT = {
   id: number;
   text: string;
   src: string;
   alt: string;
 };
 
-export type carateristicaT = {
+export type caracteristicaT = {
   id: number;
   titol: string;
   text: string;

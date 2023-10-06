@@ -1,8 +1,8 @@
 ---
-import type { carateristicaT } from '../lib/types/contingutTypes.ts';
+import type { caracteristicaT } from '../lib/types';
 
 interface Props {
-  caracteristiques: carateristicaT[];
+  caracteristiques: caracteristicaT[];
 }
 const { caracteristiques } = Astro.props;
 ---
@@ -14,7 +14,7 @@ const { caracteristiques } = Astro.props;
       caracteristiques.map(({ titol, text }) => (
         <div class='bg-slate-800 rounded-xl p-8'>
           <h4 class='text-2xl font-semibold py-4'>{titol}</h4>
-          <p class='text-lg font-thin py-2'>{text}</p>
+          <p class='text-md font-thin py-2'>{text}</p>
         </div>
       ))
     }
