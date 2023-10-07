@@ -6,7 +6,7 @@ interface Props {
   titol: string;
 }
 const { titol } = Astro.props;
-console.log('Càrrega Layout');
+console.info('Càrrega Layout');
 ---
 
 <!doctype html>
@@ -34,13 +34,44 @@ console.log('Càrrega Layout');
     </div>
 
     <style is:global>
+      @font-face {
+        font-family: 'poppins-regular';
+        src: url('../assets/fonts/Poppins-Regular.ttf');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'poppins-thin';
+        src: url('../assets/fonts/Poppins-ExtraLight.ttf');
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'inter-regular';
+        src: url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf')
+          format('truetype');
+        font-display: swap;
+      }
+
       html {
         scroll-behavior: smooth;
         font-size: 75%;
       }
 
       body {
-        font-family: 'ubuntu', sans-serif;
+        font-family: 'inter-regular', sans-serif;
+      }
+
+      h1,
+      h2,
+      h4,
+      h5,
+      a {
+        font-family: 'poppins-regular', sans-serif;
+      }
+
+      .logo {
+        font-family: 'poppins-thin', sans-serif;
       }
 
       @media (min-width: 0px) {
