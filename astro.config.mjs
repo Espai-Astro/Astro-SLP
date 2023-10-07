@@ -6,5 +6,5 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://llopfilms.github.io',
-  base: '/Astro-SLP',
+  base: '/astro-slp',
 });
