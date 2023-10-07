@@ -28,7 +28,7 @@ export const enllaços = [
   {
     id: 2,
     url: 'info',
-    nom: 'més informació',
+    nom: 'informació',
   },
   {
     id: 3,

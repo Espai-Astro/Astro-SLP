@@ -20,16 +20,18 @@ console.log('Càrrega Layout');
     <title>{titol}</title>
   </head>
 
-  <body class='bg-zinc-900 text-zinc-200 min-h-screen'>
-    <header class='alçada-header'>
-      <Header enllassos={enllaços} />
-    </header>
-    <div class='container mx-auto px-4'>
-      <slot />
+  <body class='min-h-screen bg-zinc-900 text-zinc-200'>
+    <div class='container mx-auto'>
+      <header class='alçada-header'>
+        <Header enllassos={enllaços} />
+      </header>
+      <div class='px-4'>
+        <slot />
+      </div>
+      <footer>
+        <Footer contacte={contacte} xxss={xxss} />
+      </footer>
     </div>
-    <footer>
-      <Footer contacte={contacte} xxss={xxss} />
-    </footer>
 
     <style is:global>
       html {
@@ -46,11 +48,9 @@ console.log('Càrrega Layout');
           /* color: red; */
           max-width: 420px;
         }
-
         .alçada-header {
           height: 395px;
         }
-
         section {
           scroll-margin-top: 395px;
         }
@@ -63,11 +63,9 @@ console.log('Càrrega Layout');
       color: blue; */
           max-width: 640px;
         }
-
         .alçada-header {
           height: 355px;
         }
-
         section {
           scroll-margin-top: 355px;
         }
@@ -89,11 +87,9 @@ console.log('Càrrega Layout');
       color: green; */
           max-width: 1024px;
         }
-
         .alçada-header {
           height: 225px;
         }
-
         section {
           scroll-margin-top: 225px;
         }

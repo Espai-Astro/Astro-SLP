@@ -18,10 +18,10 @@ const { nosaltres } = Astro.props;
     possimus doloribus et, officia eius hic, nemo similique!
   </p>
   <div
-    class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 p-12'>
+    class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 p-12'>
     {
       nosaltres.map(({ src, alt, nom }, index) => (
-        <div class='flex flex-col gap-3 justify-center'>
+        <div class='flex flex-col gap-6 justify-center'>
           <p
             class={`${
               index % 2 === 0 ? 'xl:order-1' : 'xl:order-0'
