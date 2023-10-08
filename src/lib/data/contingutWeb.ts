@@ -22,26 +22,31 @@ import {
 export const enllaços = [
   {
     id: 1,
+    url: 'inici',
+    nom: 'Inici',
+  },
+  {
+    id: 2,
     url: 'presentacio',
     nom: 'presentació',
   },
   {
-    id: 2,
+    id: 3,
     url: 'info',
     nom: 'informació',
   },
   {
-    id: 3,
+    id: 4,
     url: 'caracteristiques',
     nom: 'característiques',
   },
   {
-    id: 4,
+    id: 5,
     url: 'projectes',
     nom: 'projectes',
   },
   {
-    id: 5,
+    id: 6,
     url: 'nosaltres',
     nom: 'nosaltres',
   },

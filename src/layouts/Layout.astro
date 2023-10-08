@@ -2,10 +2,15 @@
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { contacte, enllaços, xxss } from '../lib/data/contingutWeb';
+import fletxa from '../assets/svg/arrow-up.svg';
+
 interface Props {
   titol: string;
 }
 const { titol } = Astro.props;
+const inici = enllaços[0];
+const { url } = inici;
+const fletxaAmunt = fletxa.src;
 console.info('Càrrega Layout');
 ---
 
@@ -20,10 +25,10 @@ console.info('Càrrega Layout');
     <title>{titol}</title>
   </head>
 
-  <body class='min-h-screen bg-zinc-900 text-zinc-50 tracking-wide'
+  <body class='min-h-screen bg-zinc-900 text-zinc-50 tracking-wide'>
     <div class='container mx-auto'>
-      <header class='alçada-header'>
-        <Header enllassos={enllaços} />
+      <header class='alçada-header' id='inici'>
+        <Header enllaços={enllaços} />
       </header>
       <div class='px-4'>
         <slot />
@@ -31,6 +36,12 @@ console.info('Càrrega Layout');
       <footer>
         <Footer contacte={contacte} xxss={xxss} />
       </footer>
+      <div class='sticky bottom-16 flex place-content-end mr-8'>
+        <button class='p-4 bg-zinc-600 rounded-full opacity-60 text-white'
+          ><a href={`#${url}`}><img src={fletxaAmunt} alt='fletxa amunt' /></a
+          ></button
+        >
+      </div>
     </div>
 
     <style is:global>

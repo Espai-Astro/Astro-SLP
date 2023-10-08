@@ -4,10 +4,10 @@ import Nav from './Nav.astro';
 import type { enllaçT } from '../lib/types';
 
 interface Props {
-  enllassos: enllaçT[];
+  enllaços: enllaçT[];
 }
 const imatgeLogo: string = logo.src;
-const { enllassos } = Astro.props;
+const { enllaços } = Astro.props;
 ---
 
 <div
@@ -21,6 +21,6 @@ border-b-2 border-b-zinc-400 flex flex-col lg:flex-row'>
       class='text-center text-6xl py-4 font-bold lg:-ms-44 uppercase tracking-wide'>
       Astro <span class='logo font-extralight'>SLP</span>
     </h1>
-    <Nav enllassos={enllassos} />
+    <Nav enllaços={enllaços} />
   </div>
 </div>
