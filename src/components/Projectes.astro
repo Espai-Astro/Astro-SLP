@@ -10,7 +10,7 @@ const { projectes } = Astro.props;
 <section id='projectes' class='flex flex-col gap-12 md:px-20'>
   <div class='flex-1 text-center'>
     <h2 class='text-5xl py-4'>Projectes</h2>
-    <p class='text-3xl font-thin py-0'>
+    <p class='text-3xl font-extralight py-0'>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, ad.
     </p>
   </div>
@@ -28,12 +28,12 @@ const { projectes } = Astro.props;
             />{' '}
             <div>
               <h4 class='text-start text-3xl font-semibold py-4'>{titol}</h4>
-              <p class='text-lg font-thin ps-4 py-2'>{descripcio}</p>
+              <p class='text-lg font-extralight ps-4 py-2'>{descripcio}</p>
               <div class='ps-4 py-4 flex gap-9'>
                 <h5 class='text-lg font-semibold'>Lorem ipsum dolor sit:</h5>
                 <ul class='flex gap-6'>
                   {projectes[index].claus.map((clau) => (
-                    <li class='pt-1 font-thin capitalize'>{clau}</li>
+                    <li class='pt-1 font-extralight capitalize'>{clau}</li>
                   ))}
                 </ul>
               </div>

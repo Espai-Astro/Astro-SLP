@@ -9,7 +9,7 @@ const { nosaltres } = Astro.props;
 
 <section id='nosaltres' class='bg-zinc-800 px-20 py-16 rounded-xl'>
   <h2 class='text-5xl py-4'>Sobre nosaltres</h2>
-  <p class='text-xl font-thin py-4'>
+  <p class='text-xl font-extralight py-4'>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto animi
     excepturi accusamus vitae. Ad optio voluptatem doloribus tempora ducimus
     harum eligendi, provident facilis quas reprehenderit, voluptates, dicta
@@ -17,8 +17,7 @@ const { nosaltres } = Astro.props;
     adipisicing elit. Libero, magni cupiditate praesentium asperiores iusto
     possimus doloribus et, officia eius hic, nemo similique!
   </p>
-  <div
-    class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 p-12'>
+  <div class='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-12 p-12'>
     {
       nosaltres.map(({ src, alt, nom }, index) => (
         <div class='flex flex-col gap-6 justify-center'>
@@ -28,7 +27,7 @@ const { nosaltres } = Astro.props;
             } text-md font-semibold text-center`}>
             {nom}
           </p>
-          <img class='w-52 mx-auto' src={src} alt={alt} title={nom}/>
+          <img class='w-52 mx-auto' src={src} alt={alt} title={nom} />
         </div>
       ))
     }

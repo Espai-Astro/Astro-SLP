@@ -14,7 +14,7 @@ const { info } = Astro.props;
 <section id='info' class='flex flex-col gap-12 lg:flex-row md:px-8 lg:px-20'>
   <div class='flex-1 flex flex-col justify-center gap-6 lg:order-1 text-center'>
     <h2 class='text-5xl py-4'>Informació</h2>
-    <p class='text-2xl md:text-2xl font-thin py-4'>
+    <p class='text-2xl md:text-2xl font-extralight py-4'>
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, ad.
     </p>
     <img class='w-60 mx-auto pt-4' src={src} alt={alt} />
@@ -23,7 +23,13 @@ const { info } = Astro.props;
     {
       info.map(({ src, text }, index) => (
         <div class='flex flex-col gap-10 bg-slate-800 justify-center rounded-xl p-10 pb-4'>
-          <img class={`${index === 1 || index === 2 ? 'w-80' : 'w-60'} h-60 mx-auto`} src={src} alt={alt} />
+          <img
+            class={`${
+              index === 1 || index === 2 ? 'w-80' : 'w-60'
+            } h-60 mx-auto`}
+            src={src}
+            alt={alt}
+          />
           <p class='text-center font-semibold '>{text}</p>
         </div>
       ))
