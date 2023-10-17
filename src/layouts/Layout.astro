@@ -45,10 +45,6 @@ console.info('Càrrega Layout');
     </div>
 
     <style is:global>
-      @tailwind base;
-      @tailwind components;
-      @tailwind utilities;
-
       * {
         margin: 0;
         padding: 0;
@@ -95,26 +91,7 @@ console.info('Càrrega Layout');
         font-family: 'poppins-thin', sans-serif;
       }
 
-      @media (min-width: 0px) {
-        .container {
-          /* color: red; */
-          max-width: 420px;
-        }
-        .alçada-header {
-          height: 395px;
-        }
-        section {
-          scroll-margin-top: 395px;
-        }
-      }
-
       @media (min-width: 640px) {
-        .container {
-          /*
-      mida: 'sm'
-      color: blue; */
-          max-width: 640px;
-        }
         .alçada-header {
           height: 355px;
         }
@@ -133,34 +110,11 @@ console.info('Càrrega Layout');
       }
 
       @media (min-width: 1024px) {
-        .container {
-          /*
-      mida: 'lg'
-      color: green; */
-          max-width: 1024px;
-        }
         .alçada-header {
           height: 225px;
         }
         section {
           scroll-margin-top: 225px;
-        }
-      }
-
-      @media (min-width: 1280px) {
-        .container {
-          /*
-      mida: 'xl'
-      color: brown; */
-          max-width: 1280px;
-        }
-      }
-
-      @media (min-width: 1536px) {
-        .container {
-          /*
-      color: yellow; */
-          max-width: 1536px;
         }
       }
     </style>
