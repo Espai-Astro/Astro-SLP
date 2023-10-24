@@ -17,7 +17,7 @@ import {
   instagram,
   facebook,
   x,
-} from './index';
+} from '../../assets/svg';
 
 export const enllaços = [
   {

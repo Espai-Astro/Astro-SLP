@@ -1,8 +1,8 @@
 ---
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import { Header } from '../components/header';
+import { Footer } from '../components';
 import { contacte, enllaços, xxss } from '../lib/data/contingutWeb';
-import fletxa from '../assets/svg/arrow-up.svg';
+import { fletxa } from '../assets/svg';
 
 interface Props {
   titol: string;
@@ -20,7 +20,7 @@ console.info('Càrrega Layout');
     <meta charset='UTF-8' />
     <meta name='description' content='Astro description' />
     <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='1553263.png' />
+    <link rel='icon' type='image/svg+xml' href='../../public/1553263.png' />
     <meta name='generator' content={Astro.generator} />
     <title>{titol}</title>
   </head>
@@ -38,9 +38,9 @@ console.info('Càrrega Layout');
       </footer>
       <div class='sticky bottom-16 flex place-content-end mr-8'>
         <a href={`#${url}`}
-          ><button
-            class='p-2 bg-zinc-600 rounded-full opacity-6'
-          ><img src={fletxaAmunt} alt='fletxa amunt' /></button></a
+          ><button class='p-2 bg-zinc-600 rounded-full opacity-6'
+            ><img src={fletxaAmunt} alt='fletxa amunt' /></button
+          ></a
         >
       </div>
     </div>
