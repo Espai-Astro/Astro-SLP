@@ -91,33 +91,41 @@ console.info('Càrrega Layout');
       .logo {
         font-family: 'poppins-thin', sans-serif;
       }
+      @media (min-width: 350px) {
+        .alçada-header {
+          height: 425px;
+        }
+        section {
+          scroll-margin-top: 425px;
+        }
+      }
+      @media (min-width: 420px) {
+        .alçada-header {
+          height: 400px;
+        }
+        section {
+          scroll-margin-top: 400px;
+        }
+      }
 
       @media (min-width: 640px) {
         .alçada-header {
-          height: 355px;
+          height: 365px;
         }
         section {
-          scroll-margin-top: 355px;
+          scroll-margin-top: 365px;
         }
       }
-
-      @media (min-width: 768px) {
-        .container {
-          /*
-      mida: 'md' 
-      color: orange; */
-          max-width: 768px;
-        }
-      }
-
+      
       @media (min-width: 1024px) {
         .alçada-header {
-          height: 225px;
+          height: 235px;
         }
         section {
-          scroll-margin-top: 225px;
+          scroll-margin-top: 235px;
         }
       }
+
     </style>
   </body>
 </html>
