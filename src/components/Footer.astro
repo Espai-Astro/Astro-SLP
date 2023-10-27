@@ -1,10 +1,10 @@
 ---
-import type { contacteT, xsT } from '../lib/types';
+import type { ContacteT, XsT } from '../lib/types';
 import logo from '../assets/img/logo-preview2.webp';
 
 interface Props {
-  contacte: contacteT;
-  xxss: xsT[];
+  contacte: ContacteT;
+  xxss: XsT[];
 }
 const { contacte, xxss } = Astro.props;
 const { nom, correu, telefon, adreça, codi, poblacio } = contacte;

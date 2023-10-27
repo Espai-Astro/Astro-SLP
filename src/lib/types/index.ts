@@ -1,21 +1,21 @@
 import type {
-  enllaçT,
-  imatgeT,
-  infoT,
-  caracteristicaT,
-  projecteT,
-  nosaltresT,
-	contacteT,
-	xsT
+  EnllaçT,
+  ImatgeT,
+  InfoT,
+  CaracteristicaT,
+  ProjecteT,
+  NosaltresT,
+  ContacteT,
+  XsT,
 } from './contingutTypes';
 
 export type {
-  enllaçT,
-  imatgeT,
-  infoT,
-  caracteristicaT,
-  projecteT,
-  nosaltresT,
-	contacteT,
-	xsT
+  EnllaçT,
+  ImatgeT,
+  InfoT,
+  CaracteristicaT,
+  ProjecteT,
+  NosaltresT,
+  ContacteT,
+  XsT,
 };

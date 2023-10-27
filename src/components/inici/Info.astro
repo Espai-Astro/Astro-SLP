@@ -1,12 +1,12 @@
 ---
-import type { imatgeT, infoT } from '../../lib/types';
+import type { ImatgeT, InfoT } from '../../lib/types';
 
 const { imatge } = Astro.props;
 const { src, alt } = imatge;
 
 interface Props {
-  imatge: imatgeT;
-  info: infoT[];
+  imatge: ImatgeT;
+  info: InfoT[];
 }
 const { info } = Astro.props;
 ---
